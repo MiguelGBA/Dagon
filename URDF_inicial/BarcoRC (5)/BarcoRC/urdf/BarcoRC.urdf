@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="BarcoRC">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0106481053576376 -0.00940988311684739 -0.0547974031079744"
+        rpy="0 0 0" />
+      <mass
+        value="0.336706133325799" />
+      <inertia
+        ixx="0.00150670810085699"
+        ixy="-1.23352044275704E-08"
+        ixz="9.88129361286902E-06"
+        iyy="0.0017663813021653"
+        iyz="7.43429274377914E-05"
+        izz="0.000431106912119755" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="turbina_Link">
+    <inertial>
+      <origin
+        xyz="0.0305368776508556 0.0304471545634561 0.512219563298273"
+        rpy="0 0 0" />
+      <mass
+        value="0.00811348461398139" />
+      <inertia
+        ixx="1.42547286777185E-06"
+        ixy="-7.42994742668061E-08"
+        ixz="1.99328626113103E-08"
+        iyy="1.32430388713794E-06"
+        iyz="1.66415996073107E-07"
+        izz="1.90438366214421E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/turbina_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/turbina_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="turbina_joint"
+    type="revolute">
+    <origin
+      xyz="-0.041936 0.039764 0.35289"
+      rpy="3.1416 -0.0012331 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="turbina_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="eje_Link">
+    <inertial>
+      <origin
+        xyz="-1.45140768305005E-07 2.11546568130994E-07 -0.0446145801934548"
+        rpy="0 0 0" />
+      <mass
+        value="0.00533924122132601" />
+      <inertia
+        ixx="3.96962372192069E-06"
+        ixy="1.15389318496703E-12"
+        ixz="3.2636339019863E-11"
+        iyy="3.96962283176922E-06"
+        iyz="-4.75683407045888E-11"
+        izz="5.05835901051409E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/eje_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/eje_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="eje_joint"
+    type="continuous">
+    <origin
+      xyz="-0.011109 0.011999 -0.027724"
+      rpy="0 0 2.9071" />
+    <parent
+      link="base_link" />
+    <child
+      link="eje_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="helice_Link">
+    <inertial>
+      <origin
+        xyz="1.1048255834506E-08 3.57094091189142E-09 -0.0100813396430642"
+        rpy="0 0 0" />
+      <mass
+        value="0.000822672426327454" />
+      <inertia
+        ixx="3.13211163708346E-08"
+        ixy="-1.18673503137019E-11"
+        ixz="-9.13325954988257E-14"
+        iyy="3.12597814922156E-08"
+        iyz="-4.35025319294404E-14"
+        izz="3.08299871051673E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/helice_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/helice_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="helice_joint"
+    type="continuous">
+    <origin
+      xyz="-0.011109 0.011999 -0.12692"
+      rpy="0 0 2.1217" />
+    <parent
+      link="base_link" />
+    <child
+      link="helice_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="motor_Link">
+    <inertial>
+      <origin
+        xyz="2.29682841782278E-07 0.00679323090396891 -3.34768905940058E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00827309146794532" />
+      <inertia
+        ixx="6.35788162889274E-07"
+        ixy="-4.79702036597381E-11"
+        ixz="1.77086090573455E-10"
+        iyy="6.89986910577233E-07"
+        iyz="6.99178596613285E-11"
+        izz="6.35651552802141E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/motor_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BarcoRC/meshes/motor_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_joint"
+    type="continuous">
+    <origin
+      xyz="-0.011109 0.011999 0"
+      rpy="-1.5708 0 -0.23454" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
