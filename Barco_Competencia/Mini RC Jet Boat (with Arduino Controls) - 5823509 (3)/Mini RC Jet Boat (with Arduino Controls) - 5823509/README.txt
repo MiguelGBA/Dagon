@@ -1,0 +1,4 @@
+Mini RC Jet Boat (with Arduino Controls) by Kallekralle on Thingiverse: https://www.thingiverse.com/thing:5823509
+
+Summary:
+(This is a remix of Bashtech´s RC Jet boat: https://www.thingiverse.com/thing:3328520)I wanted to make a smaller version, that can be printed in one piece by a printer with 300mm height. So I scaled everything down to fit to that size and customized all fittings to be more stable and exact, even in small.It fits for RC brushless motors like the 2435 and for the servo use a SG90.I also made a RC-Transmitter for it: https://www.thingiverse.com/thing:5823549For assembly an further specifications check my following links:Detailed tutorial on Arduino Project Hub:https://projecthub.arduino.cc/kallekralle/7ef78437-91fd-4920-8090-8e17a9542430project summary and presentation:http://www.kallescompany.de/bumbleboat/
